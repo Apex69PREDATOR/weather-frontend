@@ -3,6 +3,7 @@ import {createBrowserRouter,RouterProvider,Navigate}from "react-router-dom"
 import Sign from "./components/signin/sign";
 import Login from "./components/login/Login";
 import Weather_layout from "./components/app-template/weather_layout";
+import './responsive.css'
 
 
 function App() {

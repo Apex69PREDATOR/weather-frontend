@@ -1,0 +1,92 @@
+@media screen and (max-width: 1450px) {
+    .week{
+        font-size: 0.8em;
+    }
+    .week img{
+        top: 25% !important;
+    }
+}
+@media screen and (max-width: 1220px) {
+    .week{
+        font-size: 0.6em;
+    }
+    .week img{
+        top: 15% !important;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .week{
+        font-size: 0.55em;
+    }
+    .week img{
+        height: 40%;
+        width: 40%;
+        top: 20% !important;
+    }
+    .content .box{
+        font-size: 0.8em ;
+    }
+}
+@media screen and (max-width: 850px) {
+    .week{
+        font-size: 0.5em;
+    }
+    .week img{
+        height: 35%;
+        width: 40%;
+        top: 24% !important;
+    }
+    .content .box{
+        font-size: 0.75em ;
+    }
+}
+@media screen and (max-width: 750px) {
+    .week{
+        font-size: 0.4em;
+    }
+    .week img{
+        height: 30%;
+        width: 35%;
+        
+    }
+    .content .box{
+        font-size: 0.6em ;
+    }
+    
+}
+@media screen and (max-width: 600px) {
+    .week{
+        font-size: 0.35em;
+    }
+    .week img{
+        height: 30%;
+        width: 65%;
+        top: 24% !important;
+    }
+    .content .box{
+        font-size: 0.45em ;
+        width: 32%;
+    }
+    .log-out{
+        width: 20% !important;
+    }
+}
+@media screen and (max-width: 450px) {
+    .week{
+        font-size: 0.2em ;
+    }
+    .week img{
+        height: 25%;
+        width: 65%;
+        top: 27% !important;
+    }
+    .content .box{
+        font-size: 0.4em ;
+        width: 32%;
+    }
+    .content .box span{
+        align-content: center;
+        width: 100%;
+    }
+    
+}

@@ -1,9 +1,8 @@
 import {React} from 'react'
 import { useForm } from 'react-hook-form'
 import { useNavigate } from 'react-router-dom'
-// import dotenv from 'dotenv'
 
-// dotenv.config()
+
 const Login = (props) => {
     const nav=useNavigate()
     const {register,handleSubmit}=useForm()

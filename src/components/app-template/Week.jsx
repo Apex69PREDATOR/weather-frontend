@@ -23,7 +23,7 @@ const Week = (props) => {
 
     <span className="week">
        <p className="min-max" style={{marginBottom:"8%",fontSize:"1.1em"}}>
-       Max temp : <span style={{color:"red"}}> { props.unit==='cel'?props.maxtemp+'°C':props.maxtempf+'°F'} </span>Min temp : <span style={{color:"blue"}}> {props.unit==='cel'?props.mintemp+'°C':props.mintempf+'°F'} {props.mintemp<5?'🥶':'☺️'}</span>
+       Max temp : <span style={{color:"red"}}> { props.unit==='cel'?props.maxtemp+'°C':props.maxtempf+'°F'} </span>Min temp : <span style={{color:"blue"}}> {props.unit==='cel'?props.mintemp+'°C':props.mintempf+'°F'} </span>
        </p>
        <img src={props.icon} style={{position:"absolute",top:"12%"}} alt="no image available" height={85} width={90}/>
         <p style={{marginTop:"14%"}} className="rise-set">{props.showsun?<> Sunrise - {props.sunrise} Sunset - {props.sunset}</>:<>Moonrise - {props.moonrise} Moonset - {props.moonset}</>}</p>
