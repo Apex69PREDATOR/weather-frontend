@@ -1,10 +1,11 @@
 import {React} from 'react'
 import { useForm } from 'react-hook-form'
+import { useNavigate } from 'react-router-dom'
 // import dotenv from 'dotenv'
 
 // dotenv.config()
 const Login = (props) => {
-
+    const nav=useNavigate()
     const {register,handleSubmit}=useForm()
     const onsubmit=async(data)=>{
          const res=await fetch(`https://weather-backend-f0he.onrender.com/login`,{method:"POST",headers:{
@@ -38,7 +39,7 @@ const Login = (props) => {
      <input type="text"  id="password" {...register("password",{required:true})} /></div>
      <button className='signin' style={{height:"10%",color:"black",borderRadius:"10px",border:"none",cursor:"pointer"}}>Sign in</button>
     </form>
-    <div className="navsign">Don't have an account sign up <a style={{fontSize:""}} href="/signup"><i>here</i></a></div>
+    <div className="navsign">Don't have an account sign up <span style={{fontSize:""}} onClick={()=>{nav('/signup')}}><i>here</i></span></div>
     </div>
     </>
   )
