@@ -52,7 +52,7 @@ const sign = () => {
      </div>
      <button className='signin' style={{height:"10%",color:"black",borderRadius:"10px",border:"none",cursor:"pointer"}}>Sign up</button>
     </form>
-    <div className="navsign" style={{left:"46%"}}>You can sign in <a href="/login">here</a></div>
+    <div className="navsign" style={{left:"46%"}}>You can sign in <span onClick={()=>{nav('/login')}}>here</span></div>
     </div>
     </>
   )
