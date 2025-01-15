@@ -7,6 +7,10 @@ import Humidity from './Humidity'
 import "./additional.css"
 import Visibility from './Visibility'
 import Airquality from './Airquality'
+// import dotenv from 'dotenv'
+
+// dotenv.config()
+
 const Additional = (props) => {
   const nav=useNavigate()
   const [them,Setthem]=useState('s-day')
@@ -40,7 +44,7 @@ const Additional = (props) => {
     },[])
 
     const forecast=async(place)=>{
-      const res=await fetch("http://localhost:5000/forecast",{method:"POST",headers:{
+      const res=await fetch(`https://weather-backend-f0he.onrender.com/forecast`,{method:"POST",headers:{
         "Content-type":"application/json"
       },body:JSON.stringify({place})})
       const obj=await res.json()

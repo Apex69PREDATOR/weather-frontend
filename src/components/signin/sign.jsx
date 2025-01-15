@@ -1,17 +1,20 @@
-import {React,useState} from 'react'
+import {React} from 'react'
 import {useForm} from 'react-hook-form'
 import {useNavigate} from 'react-router-dom'
 import "./sign.css"
+// import dotenv from 'dotenv'
+
+// dotenv.config()
 const sign = () => {
   const nav=useNavigate()
-    const {register,handleSubmit,unregister,reset,setError}=useForm()
+    const {register,handleSubmit,reset,setError}=useForm()
     const onsubmit=async (data)=>{
       console.log(data)
       if(data.password!==data.confirm_password){
         alert("passwords dosen't match")
         return
       }
-      const res=await fetch("http://localhost:5000/signup",{method:"POST",headers:{
+      const res=await fetch(`https://weather-backend-f0he.onrender.com/signup`,{method:"POST",headers:{
         "Content-type":"application/json"
       },body:JSON.stringify(data)})
       const account=await res.json()

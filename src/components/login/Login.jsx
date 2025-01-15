@@ -1,11 +1,13 @@
 import {React} from 'react'
 import { useForm } from 'react-hook-form'
+// import dotenv from 'dotenv'
 
+// dotenv.config()
 const Login = (props) => {
 
     const {register,handleSubmit}=useForm()
     const onsubmit=async(data)=>{
-         const res=await fetch("http://localhost:5000/login",{method:"POST",headers:{
+         const res=await fetch(`https://weather-backend-f0he.onrender.com/login`,{method:"POST",headers:{
           "Content-type":"application/json"
          },body:JSON.stringify(data)})
          const r=await res.json()

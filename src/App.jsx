@@ -3,6 +3,8 @@ import {createBrowserRouter,RouterProvider,Navigate}from "react-router-dom"
 import Sign from "./components/signin/sign";
 import Login from "./components/login/Login";
 import Weather_layout from "./components/app-template/weather_layout";
+
+
 function App() {
   const [login,setLogin]=useState(false)
   const [loding,setLoding]=useState(true)
@@ -11,12 +13,10 @@ function App() {
 
   const check_login=async()=>{
     if(authToken){
-      console.log("ladhu");
       
-      const res=await fetch("http://localhost:5000/checklogin",{method:"GET",headers:{
+      const res=await fetch(`https://weather-backend-f0he.onrender.com/checklogin`,{method:"GET",headers:{
         "Authorization": `Bearer ${authToken}`
       }})
-      console.log("kok");
       
       const checklog=await res.json()
       console.log(checklog)

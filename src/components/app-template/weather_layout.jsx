@@ -1,8 +1,10 @@
-import {React,useState,useEffect,lazy,Suspense,useRef} from 'react'
+import {React,useState,useEffect,lazy,Suspense} from 'react'
 import "./layout.css"
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faMagnifyingGlass,faDropletSlash,faDroplet, faL } from '@fortawesome/free-solid-svg-icons';
+import {faMagnifyingGlass,faDropletSlash,faDroplet} from '@fortawesome/free-solid-svg-icons';
 import Additional from './Additional';
+// import dotenv from 'dotenv'
+
 const Sunny = lazy(() => import("../weather-image/Sunny"));
 const Moon = lazy(()=>import("../weather-image/Moon"))
 const Suncloud = lazy(()=>import("../weather-image/Suncloud"))
@@ -12,6 +14,8 @@ const Moonrain = lazy(()=>import("../weather-image/Moonrain"))
 const Moonsnow = lazy(()=>import("../weather-image/Moonsnow"))
 const Sunsnow = lazy(()=>import("../weather-image/Sunsnow"))
 const Moonthunder = lazy(()=>import("../weather-image/Moonthunder"))
+// dotenv.config()
+
 
 const weather_layout = (props) => {
    const [place,setPlace]=useState(null)
@@ -95,7 +99,7 @@ const weather_layout = (props) => {
           const latitude = position.coords.latitude;
           const longitude = position.coords.longitude;
           setPlace(latitude.toString()+','+longitude.toString())
-          const res=await fetch("http://localhost:5000/get-weather",{method:"POST",headers:{
+          const res=await fetch(`https://weather-backend-f0he.onrender.com/get-weather`,{method:"POST",headers:{
             "Content-type":"application/json"
           },body:JSON.stringify({latitude:latitude,longitude:longitude})})
           const weather_conditions=await res.json() 
@@ -138,7 +142,7 @@ const weather_layout = (props) => {
       if(e.target.value){
         setTemp(null)
         setPlace(e.target.value)
-        const res=await fetch("http://localhost:5000/get-weather/byplace",{method:"POST",headers:{
+        const res=await fetch(`https://weather-backend-f0he.onrender.com/get-weather/byplace`,{method:"POST",headers:{
           "Content-type":'application/json'
         },body:JSON.stringify({place:e.target.value})})
         const weather_conditions=await res.json()
