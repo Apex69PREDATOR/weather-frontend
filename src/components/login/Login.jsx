@@ -39,7 +39,7 @@ const Login = (props) => {
      <input type="text"  id="password" {...register("password",{required:true})} /></div>
      <button className='signin' style={{height:"10%",color:"black",borderRadius:"10px",border:"none",cursor:"pointer"}}>Sign in</button>
     </form>
-    <div className="navsign">Don't have an account sign up <span style={{fontSize:""}} onClick={()=>{nav('/signup')}}><i>here</i></span></div>
+    <div className="navsign">Don't have an account sign up <span style={{color:"blue",cursor:"pointer"}} onClick={()=>{nav('/signup')}}><i>here</i></span></div>
     </div>
     </>
   )
