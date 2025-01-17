@@ -32,7 +32,7 @@ const Login = (props) => {
   return (
     <>
     <div className="logcontainer">
-   {issubmitting && <div style={{position:"absolute",top:"30%",left:"40%"}}>Loading...</div>}
+   {issubmitting && <div style={{position:"absolute",top:"30%",left:"40%",zIndex:"3"}}>Loading...</div>}
     <form className='weather-sign weather-log' onSubmit={handleSubmit(onsubmit)}>
       <div className="sheet"></div>
       <div className="wrap"><label htmlFor="email"><b>Email</b></label>
