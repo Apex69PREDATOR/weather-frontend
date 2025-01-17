@@ -32,14 +32,14 @@ const Login = (props) => {
   return (
     <>
     <div className="logcontainer">
-   {issubmitting && <div style={{position:"absolute",top:"30%",left:"40%",zIndex:"3"}}>Loading...</div>}
+   {issubmitting && <div className='loader' ></div>}
     <form className='weather-sign weather-log' onSubmit={handleSubmit(onsubmit)}>
       <div className="sheet"></div>
       <div className="wrap"><label htmlFor="email"><b>Email</b></label>
      <input type="text"  id="email" {...register("email",{required:true})} /></div>
      <div className="wrap"><label htmlFor="password" ><b> Password</b></label>
      <input type="text"  id="password" {...register("password",{required:true})} /></div>
-     <button className='signin' style={{height:"10%",color:"black",borderRadius:"10px",border:"none",cursor:"pointer"}}>Sign in</button>
+     <button className='signin' disabled={issubmitting?true:false} style={{height:"10%",color:"black",borderRadius:"10px",border:"none",cursor:"pointer"}}>Sign in</button>
     </form>
     <div className="navsign">Don't have an account sign up <span style={{color:"blue",cursor:"pointer"}} onClick={()=>{nav('/signup')}}><i>here</i></span></div>
     </div>

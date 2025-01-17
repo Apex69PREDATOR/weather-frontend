@@ -33,7 +33,7 @@ function App() {
    check_login()
   },[])
   if(loding){
-    return <div>Loading...</div>
+    return <div className="loader"></div>
   }
  const route=createBrowserRouter([
    {
