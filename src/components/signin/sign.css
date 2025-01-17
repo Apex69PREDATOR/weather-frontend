@@ -3,6 +3,8 @@
     width: 100%;
     background:url('../../assets/background.webp');
     position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .weather-sign{
     position: relative;
