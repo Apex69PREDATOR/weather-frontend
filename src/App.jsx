@@ -15,7 +15,7 @@ function App() {
   const check_login=async()=>{
     if(authToken){
       
-      const res=await fetch(`https://weather-backend-f0he.onrender.com/checklogin`,{method:"GET",headers:{
+      const res=await fetch(`http://3.110.46.34:3001/checklogin`,{method:"GET",headers:{
         "Authorization": `Bearer ${authToken}`
       }})
       
