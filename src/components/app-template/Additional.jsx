@@ -44,7 +44,7 @@ const Additional = (props) => {
     },[])
 
     const forecast=async(place)=>{
-      const res=await fetch(`https://weather-backend-f0he.onrender.com/forecast`,{method:"POST",headers:{
+      const res=await fetch(`http://3.110.46.34:3001/forecast`,{method:"POST",headers:{
         "Content-type":"application/json"
       },body:JSON.stringify({place})})
       const obj=await res.json()
