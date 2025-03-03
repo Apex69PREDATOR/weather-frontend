@@ -99,7 +99,7 @@ const weather_layout = (props) => {
           const latitude = position.coords.latitude;
           const longitude = position.coords.longitude;
           setPlace(latitude.toString()+','+longitude.toString())
-          const res=await fetch(`http://3.110.46.34:3001/get-weather`,{method:"POST",headers:{
+          const res=await fetch(`https://7cc2-3-110-46-34.ngrok-free.app/get-weather`,{method:"POST",headers:{
             "Content-type":"application/json"
           },body:JSON.stringify({latitude:latitude,longitude:longitude})})
           const weather_conditions=await res.json() 
@@ -142,7 +142,7 @@ const weather_layout = (props) => {
       if(e.target.value){
         setTemp(null)
         setPlace(e.target.value)
-        const res=await fetch(`http://3.110.46.34:3001/get-weather/byplace`,{method:"POST",headers:{
+        const res=await fetch(`https://7cc2-3-110-46-34.ngrok-free.app/get-weather/byplace`,{method:"POST",headers:{
           "Content-type":'application/json'
         },body:JSON.stringify({place:e.target.value})})
         const weather_conditions=await res.json()

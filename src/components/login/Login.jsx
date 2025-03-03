@@ -9,7 +9,7 @@ const Login = (props) => {
     const {register,handleSubmit}=useForm()
     const onsubmit=async(data)=>{
         setIssubmitting(true)
-         const res=await fetch(`http://3.110.46.34:3001/login`,{method:"POST",headers:{
+         const res=await fetch(`https://7cc2-3-110-46-34.ngrok-free.app/login`,{method:"POST",headers:{
           "Content-type":"application/json"
          },body:JSON.stringify(data)})
          const r=await res.json()
