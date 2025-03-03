@@ -15,7 +15,7 @@ function App() {
   const check_login=async()=>{
     if(authToken){
       
-      const res=await fetch(`https://7cc2-3-110-46-34.ngrok-free.app/checklogin`,{method:"GET",headers:{
+      const res=await fetch(`https://7cc2-3-110-46-34.ngrok-free.app/checklogin`,{method:"POST",headers:{
         "Authorization": `Bearer ${authToken}`
       }})
       
