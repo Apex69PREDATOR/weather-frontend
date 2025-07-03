@@ -15,7 +15,7 @@ function App() {
   const check_login=async()=>{
     if(authToken){
       
-      const res=await fetch(`http://13.60.43.155:5005/checklogin`,{method:"GET",headers:{
+      const res=await fetch(`http://13.60.43.155:5005/checklogin`,{method:"POST",headers:{
         "Authorization": `Bearer ${authToken}`
       }})
       
