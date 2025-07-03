@@ -44,7 +44,7 @@ const Additional = (props) => {
     },[])
 
     const forecast=async(place)=>{
-      const res=await fetch(`http://13.60.43.155:5005/forecast`,{method:"POST",headers:{
+      const res=await fetch(`https://3344-13-60-43-155.ngrok-free.app/forecast`,{method:"POST",headers:{
         "Content-type":"application/json"
       },body:JSON.stringify({place})})
       const obj=await res.json()
