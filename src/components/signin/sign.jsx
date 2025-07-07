@@ -14,7 +14,7 @@ const sign = () => {
         alert("passwords dosen't match")
         return
       }
-      const res=await fetch(`https://3344-13-60-43-155.ngrok-free.app/signup`,{method:"POST",headers:{
+      const res=await fetch(`https://5d62-13-60-104-47.ngrok-free.app/signup`,{method:"POST",headers:{
         "Content-type":"application/json"
       },body:JSON.stringify(data)})
       const account=await res.json()
