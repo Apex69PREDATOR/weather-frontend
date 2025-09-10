@@ -15,7 +15,7 @@ function App() {
   const check_login=async()=>{
     if(authToken){
       
-      const res=await fetch(`https://5d62-13-60-104-47.ngrok-free.app/checklogin`,{method:"POST",headers:{
+      const res=await fetch(`${import.meta.env.VITE_SERVER}/checklogin`,{method:"POST",headers:{
         "Authorization": `Bearer ${authToken}`
       }})
       

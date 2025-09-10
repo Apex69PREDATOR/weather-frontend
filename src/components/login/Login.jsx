@@ -9,7 +9,7 @@ const Login = (props) => {
     const {register,handleSubmit}=useForm()
     const onsubmit=async(data)=>{
         setIssubmitting(true)
-         const res=await fetch(`https://5d62-13-60-104-47.ngrok-free.app/login`,{method:"POST",headers:{
+         const res=await fetch(`${import.meta.env.VITE_SERVER}/login`,{method:"POST",headers:{
           "Content-type":"application/json"
          },body:JSON.stringify(data)})
          const r=await res.json()
